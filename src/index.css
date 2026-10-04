@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* LIGHT THEME (White + Sky Blue) */
+    --background: #FFFFFF;
+    --secondary-bg: #F7FBFF;
+    --sidebar: #FFFFFF;
+    --card: #FFFFFF;
+    --primary: #1EA7F2;
+    --primary-bright: #38BDF8;
+    --heading: #123B63;
+    --foreground: #294B6B;
+    --muted: #6B8AA6;
+    --accent: #EAF7FF;
+    --border: #D7EAF7;
+    --hover: #E8F6FF;
+    --active-nav: #DDF3FF;
+    --active-nav-text: #168BD0;
+    --success: #20B981;
+    --btn-from: #1EA7F2;
+    --btn-to: #38BDF8;
+    --chart-grid: #D7EAF7;
+    --chart-tooltip-bg: #FFFFFF;
+    --chart-tooltip-border: #D7EAF7;
+    --chart-tooltip-text: #123B63;
+    --input-bg: #F7FBFF;
+  }
+
+  .dark {
+    /* DARK THEME (Dark Charcoal + Sky Blue) */
+    --background: #0B1220;
+    --secondary-bg: #101A2B;
+    --sidebar: #0A111D;
+    --card: #111E30;
+    --primary: #38BDF8;
+    --primary-bright: #60C8FF;
+    --heading: #F8FAFC;
+    --foreground: #E2E8F0;
+    --muted: #94A3B8;
+    --accent: #152438;
+    --border: #20334A;
+    --hover: #172A40;
+    --active-nav: #123B63;
+    --active-nav-text: #60C8FF;
+    --success: #20B981;
+    --btn-from: #38BDF8;
+    --btn-to: #1EA7F2;
+    --chart-grid: #20334A;
+    --chart-tooltip-bg: #111E30;
+    --chart-tooltip-border: #20334A;
+    --chart-tooltip-text: #F8FAFC;
+    --input-bg: #101A2B;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--secondary-bg);
+    color: var(--foreground);
+    transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Centralized Theme Utility Classes */
+.bg-theme-bg { background-color: var(--background); }
+.bg-theme-secondary { background-color: var(--secondary-bg); }
+.bg-theme-sidebar { background-color: var(--sidebar); }
+.bg-theme-card { background-color: var(--card); }
+.bg-theme-accent { background-color: var(--accent); }
+.bg-theme-hover { background-color: var(--hover); }
+.bg-theme-active-nav { background-color: var(--active-nav); }
+.bg-theme-input { background-color: var(--input-bg); }
+
+.text-theme-heading { color: var(--heading); }
+.text-theme-foreground { color: var(--foreground); }
+.text-theme-muted { color: var(--muted); }
+.text-theme-primary { color: var(--primary); }
+.text-theme-active-nav { color: var(--active-nav-text); }
+.text-theme-success { color: var(--success); }
+
+.border-theme-border { border-color: var(--border); }
+.border-theme-primary { border-color: var(--primary); }
+
+.divide-theme-border > * + * { border-color: var(--border); }
+
+.hover\:bg-theme-hover:hover { background-color: var(--hover); }
+.hover\:bg-theme-secondary:hover { background-color: var(--secondary-bg); }
+.hover\:text-theme-heading:hover { color: var(--heading); }
+.hover\:text-theme-primary:hover { color: var(--primary); }
+.hover\:border-theme-primary:hover { border-color: var(--primary); }
+
+/* Primary Button Sky Blue Gradient */
+.btn-primary-gradient {
+  background-image: linear-gradient(to right, var(--btn-from), var(--btn-to));
+  color: #FFFFFF;
+}
+.btn-primary-gradient:hover {
+  filter: brightness(1.06);
+}
+
+/* Custom smooth scrollbar styled for sky-blue branding */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--secondary-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(30, 167, 242, 0.7);
+}

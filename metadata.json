@@ -1,0 +1,6 @@
+{
+  "name": "DABI AI",
+  "description": "Your AI Data Analyst: intelligent data analytics platform to upload CSV & Excel datasets, converse with your data, and automatically build interactive dashboards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
